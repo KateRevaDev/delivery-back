@@ -1,0 +1,45 @@
+GET http://localhost:3333/shops
+
+### creating shop
+
+POST http://localhost:3333/shops
+Content-Type: application/json
+
+{
+  "name": "FORA"
+}
+
+### deleting shop
+DELETE http://localhost:3333/shops/6479dc5fb5fbb35def5625fb
+
+### getting goods
+GET http://localhost:3333/goods
+
+### creating goods
+POST http://localhost:3333/goods
+Content-Type: application/json
+
+{
+  "name": "parr",
+  "price": 80,
+  "shopId": "6479dc36b5fbb35def5625f9"
+}
+
+### creating order
+POST http://localhost:3333/orders
+Content-Type: application/json
+
+{
+  "goods": [{
+    "_id": "647b931fc91820782075bc2e",
+    "name": "tomato",
+    "quantity": 1,
+    "price": {
+      "$numberDecimal": "80"
+    }
+  }],
+  "name": "Kate",
+  "email": "kate@mail.com",
+  "address": "Kyiv",
+  "phone": "380686551946"
+}
